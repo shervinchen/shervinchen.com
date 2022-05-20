@@ -5,7 +5,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 import Layout from '../components/Layout';
-import { getAbout } from '../lib/about';
+import { getIndex } from '../lib/getIndex';
 
 interface AboutData {
   source: MDXRemoteSerializeResult;
@@ -25,7 +25,7 @@ const Home: NextPage<AboutData> = ({ source }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { content } = await getAbout();
+  const { content } = await getIndex();
   const mdxSource = await serialize(content);
   return {
     props: {

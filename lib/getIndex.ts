@@ -3,8 +3,8 @@ import path from 'path';
 
 const directory = path.join(process.cwd(), 'pages');
 
-export async function getAbout() {
-  const fullPath = path.join(directory, 'about.mdx');
+export async function getIndex() {
+  const fullPath = path.join(directory, 'index.mdx');
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   return {

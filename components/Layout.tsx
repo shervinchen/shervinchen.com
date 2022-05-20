@@ -26,8 +26,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </a>
         </Link>
         <nav className="flex items-center gap-x-4">
-          <Link href="/blog">
-            <a className="text-[#4B5563]">Blog</a>
+          <Link href="/posts">
+            <a className="text-[#4B5563]">Posts</a>
           </Link>
           <Link href="/projects">
             <a className="text-[#4B5563]">Projects</a>
