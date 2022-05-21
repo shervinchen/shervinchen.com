@@ -8,7 +8,7 @@ import { getPosts } from '../lib/getPosts';
 import { Post } from '../types';
 import { formatDate } from '../utils';
 
-const Posts: NextPage<{
+const PostsPage: NextPage<{
   posts: Post[];
 }> = ({ posts }) => {
   return (
@@ -28,9 +28,11 @@ const Posts: NextPage<{
               </a>
             </Link>
             <p className="text-base text-[#313233] mb-3">{post.description}</p>
-            <time className="text-base text-[#718096]">
-              {formatDate(post.date)}
-            </time>
+            <div>
+              <time className="text-base text-[#718096]">
+                {formatDate(post.date)}
+              </time>
+            </div>
           </li>
         ))}
       </ul>
@@ -38,7 +40,7 @@ const Posts: NextPage<{
   );
 };
 
-export default Posts;
+export default PostsPage;
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getPosts();

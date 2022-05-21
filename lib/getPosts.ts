@@ -2,13 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+import { postFilePaths, POSTS_PATH } from '../utils/path';
 import { Post } from '../types';
-
-const POSTS_PATH = path.join(process.cwd(), 'posts');
-
-export const postFilePaths = fs
-  .readdirSync(POSTS_PATH)
-  .filter((path) => /\.mdx?$/.test(path));
 
 export function getPosts() {
   const posts = postFilePaths.map((filePath) => {

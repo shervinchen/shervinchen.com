@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 import Layout from '../components/Layout';
@@ -11,7 +10,7 @@ interface AboutData {
   source: MDXRemoteSerializeResult;
 }
 
-const Home: NextPage<AboutData> = ({ source }) => {
+const HomePage: NextPage<AboutData> = ({ source }) => {
   return (
     <Layout>
       <Head>
@@ -25,13 +24,13 @@ const Home: NextPage<AboutData> = ({ source }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { content } = await getIndex();
-  const mdxSource = await serialize(content);
+  const { source } = await getIndex();
+
   return {
     props: {
-      source: mdxSource,
+      source,
     },
   };
 };
 
-export default Home;
+export default HomePage;
