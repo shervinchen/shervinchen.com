@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
+import readingTime from 'reading-time';
 import remarkGfm from 'remark-gfm';
 import remarkPrism from 'remark-prism';
 import rehypeSlug from 'rehype-slug';
@@ -39,6 +40,7 @@ export async function getPost(slug: string) {
 
   return {
     source: mdxSource,
+    readingTime: readingTime(content),
     ...data,
   };
 }
