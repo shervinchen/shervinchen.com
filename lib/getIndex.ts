@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { serialize } from 'next-mdx-remote/serialize';
 
-const directory = path.join(process.cwd(), 'pages');
+const directory = path.join(process.cwd(), 'data');
 
 export async function getIndex() {
   const fullPath = path.join(directory, 'index.mdx');
