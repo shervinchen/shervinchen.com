@@ -20,13 +20,11 @@ const PostsPage: NextPage<{
       <ul className="flex flex-col gap-y-8">
         {posts.map((post: Post) => (
           <li key={post.id}>
-            <Link href={`/posts/${post.id}`}>
-              <a>
-                <h2 className="text-xl font-semibold text-[#1A202C] mb-3">
-                  {post.title}
-                </h2>
-              </a>
-            </Link>
+            <h2 className="text-xl font-semibold text-[#1A202C] mb-3">
+              <Link href={`/posts/${post.id}`}>
+                <a>{post.title}</a>
+              </Link>
+            </h2>
             <p className="text-base text-[#313233] mb-3">{post.description}</p>
             <div>
               <time className="text-base text-[#718096]">
