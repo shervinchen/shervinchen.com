@@ -15,6 +15,18 @@ const HomePage: NextPage<AboutData> = ({ source }) => {
     <Layout>
       <Head>
         <title>Shervin Chen</title>
+        <meta name="title" content="Shervin Chen" />
+        <meta name="description" content="Shervin Chen's personal website" />
+        <meta property="og:title" content="Shervin Chen" />
+        <meta
+          property="og:description"
+          content="Shervin Chen's personal website"
+        />
+        <meta name="twitter:title" content="Shervin Chen" />
+        <meta
+          name="twitter:description"
+          content="Shervin Chen's personal website"
+        />
       </Head>
       <div className="prose">
         <MDXRemote {...source} />

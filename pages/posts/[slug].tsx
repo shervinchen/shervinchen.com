@@ -19,12 +19,16 @@ const PostPage: NextPage<{ post: Post }> = ({ post }) => {
     <Layout>
       <Head>
         <title>{post.title}</title>
+        <meta name="title" content={post.title} />
+        <meta name="description" content={post.description} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.description} />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.description} />
       </Head>
       <h1 className="text-[32px] mb-4 font-extrabold">{post.title}</h1>
       <div className="text-base text-[#718096] mb-8">
-        <time>
-          {formatDate(post.date)}
-        </time>
+        <time>{formatDate(post.date)}</time>
         <span> · </span>
         <span>{`${Math.round(post.readingTime.minutes)}min`}</span>
       </div>

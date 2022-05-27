@@ -14,7 +14,19 @@ const PostsPage: NextPage<{
   return (
     <Layout>
       <Head>
-        <title>Posts - Shervin Chen</title>
+        <title>Posts</title>
+        <meta name="title" content="Posts" />
+        <meta name="description" content="Shervin Chen's personal website" />
+        <meta property="og:title" content="Posts" />
+        <meta
+          property="og:description"
+          content="Shervin Chen's personal website"
+        />
+        <meta name="twitter:title" content="Posts" />
+        <meta
+          name="twitter:description"
+          content="Shervin Chen's personal website"
+        />
       </Head>
       <h1 className="text-[32px] mb-8 font-extrabold">Posts</h1>
       <ul className="flex flex-col gap-y-8">
