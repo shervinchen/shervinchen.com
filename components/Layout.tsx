@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col max-w-screen-sm	min-h-screen mx-auto py-10">
+    <div className="flex flex-col max-w-screen-sm	min-h-screen mx-auto py-10 px-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="author" content="Shervin Chen" />

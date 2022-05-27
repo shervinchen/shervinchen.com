@@ -8,7 +8,7 @@ export default function Footer() {
           href="https://github.com/shervinchen"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex"
+          className="inline-flex min-w-fit"
         >
           <Image
             priority
@@ -22,7 +22,7 @@ export default function Footer() {
           href="https://twitter.com/shervinchen"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex"
+          className="inline-flex min-w-fit"
         >
           <Image
             priority
@@ -36,7 +36,7 @@ export default function Footer() {
           href="https://instagram.com/shervinchen"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex"
+          className="inline-flex min-w-fit"
         >
           <Image
             priority
@@ -46,7 +46,10 @@ export default function Footer() {
             alt="instagram"
           />
         </a>
-        <a href="mailto:shervinchen@gmail.com" className="inline-flex">
+        <a
+          href="mailto:shervinchen@gmail.com"
+          className="inline-flex min-w-fit"
+        >
           <Image
             priority
             src="/images/mail.svg"
@@ -55,7 +58,7 @@ export default function Footer() {
             alt="mail"
           />
         </a>
-        <a href="/feed.xml" className="inline-flex">
+        <a href="/feed.xml" className="inline-flex min-w-fit">
           <Image
             priority
             src="/images/rss.svg"
