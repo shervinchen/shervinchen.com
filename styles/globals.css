@@ -6,6 +6,9 @@
   body {
     background-color: #fcfcfc;
   }
+  a:hover {
+    opacity: 0.7;
+  }
 }
 
 .prose .anchor {
