@@ -29,7 +29,7 @@ module.exports = {
                 '&::marker': { backgroundColor: theme('colors.gray[400]') },
               },
             },
-            hr: { borderColor: theme('colors.gray[800]') },
+            hr: { borderColor: theme('colors.gray[600]') },
             blockquote: {
               color: theme('colors.gray[100]'),
               borderLeftColor: theme('colors.gray[700]'),
