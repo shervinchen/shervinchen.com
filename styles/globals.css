@@ -24,10 +24,15 @@
 }
 
 .prose .anchor:after {
-  @apply text-gray-300 dark:text-gray-700;
+  @apply text-gray-300 dark:text-gray-400;
   content: '#';
 }
 
 .prose *:hover > .anchor {
   @apply visible no-underline;
+}
+
+[class='dark'] [data-hide-on-theme='dark'],
+[class='light'] [data-hide-on-theme='light'] {
+  display: none;
 }

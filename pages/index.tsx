@@ -28,7 +28,7 @@ const HomePage: NextPage<AboutData> = ({ source }) => {
           content="Shervin Chen's personal website"
         />
       </Head>
-      <div className="prose">
+      <div className="prose dark:prose-dark">
         <MDXRemote {...source} />
       </div>
     </Layout>

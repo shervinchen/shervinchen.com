@@ -32,14 +32,16 @@ const PostsPage: NextPage<{
       <ul className="flex flex-col gap-y-8">
         {posts.map((post: Post) => (
           <li key={post.id}>
-            <h2 className="text-xl font-semibold text-[#1A202C] mb-3">
+            <h2 className="text-xl font-semibold text-[#1A202C] dark:text-gray-100 mb-3">
               <Link href={`/posts/${post.id}`}>
                 <a>{post.title}</a>
               </Link>
             </h2>
-            <p className="text-base text-[#313233] mb-3">{post.description}</p>
+            <p className="text-base text-[#313233] dark:text-gray-400 mb-3">
+              {post.description}
+            </p>
             <div>
-              <time className="text-base text-[#718096]">
+              <time className="text-base text-[#718096] dark:text-gray-300">
                 {formatDate(post.date)}
               </time>
             </div>
