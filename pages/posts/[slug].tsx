@@ -27,7 +27,7 @@ const PostPage: NextPage<{ post: Post }> = ({ post }) => {
         <meta name="twitter:description" content={post.description} />
       </Head>
       <h1 className="text-[32px] mb-4 font-extrabold">{post.title}</h1>
-      <div className="text-base text-[#718096] dark:text-gray-300 mb-8">
+      <div className="text-base text-gray-500 dark:text-gray-300 mb-8">
         <time>{formatDate(post.date)}</time>
         <span> · </span>
         <span>{`${Math.round(post.readingTime.minutes)}min`}</span>

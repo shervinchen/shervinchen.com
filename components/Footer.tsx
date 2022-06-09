@@ -123,7 +123,7 @@ export default function Footer() {
           </div>
         </a>
       </div>
-      <div className="text-sm text-[#313233] dark:text-gray-300 text-center">
+      <div className="text-sm text-gray-700 dark:text-gray-300 text-center">
         © {new Date().getFullYear()} Shervin Chen.
       </div>
     </footer>
