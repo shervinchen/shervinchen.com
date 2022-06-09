@@ -10,3 +10,12 @@ export type Post = {
   source: MDXRemoteSerializeResult;
   readingTime: ReadTimeResults;
 };
+
+export interface ProjectCategory {
+  name: string;
+  projects: {
+    name: string;
+    description: string;
+    icon: string;
+  }[];
+}
