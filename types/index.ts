@@ -19,3 +19,15 @@ export interface ProjectCategory {
     icon: string;
   }[];
 }
+
+export type PhotoData = {
+  thumbnail: string;
+  original: string;
+  date: string;
+  description: string;
+};
+
+export type PhotoProps = {
+  src: string;
+  alt: string;
+};

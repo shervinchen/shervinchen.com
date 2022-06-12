@@ -37,3 +37,19 @@
 [class='light'] [data-hide-on-theme='light'] {
   display: none;
 }
+
+.photos-grid {
+  display: flex;
+  margin-left: -20px;
+  width: auto;
+}
+
+.photos-grid_column {
+  padding-left: 20px;
+  background-clip: padding-box;
+}
+
+.photos-grid_column > div {
+  display: flex;
+  margin-bottom: 20px;
+}

@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import '../styles/prism-okaidia.css';
+import 'react-photo-view/dist/react-photo-view.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
