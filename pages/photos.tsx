@@ -53,11 +53,13 @@ const PhotosPage: NextPage<{
             {photosData.map((photoData, index) => {
               return (
                 <PhotoView key={index} src={photoData.original}>
-                  <Image
-                    {...photosProps[index]}
-                    alt={photoData.location}
-                    placeholder="blur"
-                  />
+                  <div>
+                    <Image
+                      {...photosProps[index]}
+                      alt={photoData.location}
+                      placeholder="blur"
+                    />
+                  </div>
                 </PhotoView>
               );
             })}
