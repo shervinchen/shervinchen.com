@@ -24,7 +24,7 @@ export type PhotoData = {
   thumbnail: string;
   original: string;
   date: string;
-  description: string;
+  location: string;
 };
 
 export type PhotoProps = {

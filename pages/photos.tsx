@@ -35,7 +35,16 @@ const PhotosPage: NextPage<{
         Here are some of the photos I took during the travel.
       </p>
       <div>
-        <PhotoProvider>
+        <PhotoProvider
+          overlayRender={({ index }) => {
+            return (
+              <div className="absolute left-0 bottom-0 p-2 w-full min-h-24 text-sm text-center text-slate-300 z-50 bg-black/50">
+                <p>Location: {photosData[index].location}</p>
+                <p>Date: {photosData[index].date}</p>
+              </div>
+            );
+          }}
+        >
           <Masonry
             breakpointCols={{ default: 3, 768: 2, 640: 1 }}
             className="photos-grid"
@@ -46,7 +55,7 @@ const PhotosPage: NextPage<{
                 <PhotoView key={index} src={photoData.original}>
                   <Image
                     {...photosProps[index]}
-                    alt={photoData.description}
+                    alt={photoData.location}
                     placeholder="blur"
                   />
                 </PhotoView>
