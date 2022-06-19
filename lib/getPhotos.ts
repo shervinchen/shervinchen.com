@@ -16,7 +16,9 @@ export async function getPhotos() {
   const photosProps = await Promise.all(
     photosData.map(async (photoData: PhotoData) => {
       const { thumbnail } = photoData;
-      const { base64, img } = await getPlaiceholder(thumbnail);
+      const { base64, img } = await getPlaiceholder(thumbnail, {
+        size: 4,
+      });
 
       return {
         ...img,
