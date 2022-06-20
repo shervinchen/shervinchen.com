@@ -20,6 +20,7 @@ export async function getPost(slug: string) {
   const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
   const source = fs.readFileSync(postFilePath, 'utf8');
   const { content, data } = matter(source);
+  data.date = data.date.toString();
   const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [remarkGfm, remarkPrism],

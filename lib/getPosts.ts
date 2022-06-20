@@ -11,6 +11,7 @@ export function getPosts() {
     const fullPath = path.join(POSTS_PATH, filePath);
     const source = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(source);
+    data.date = data.date.toString();
 
     return {
       id,
