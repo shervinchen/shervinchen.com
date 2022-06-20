@@ -32,6 +32,9 @@ export default function Header() {
         <Link href="/posts">
           <a className="text-gray-600 dark:text-gray-300">Posts</a>
         </Link>
+        <Link href="/tags">
+          <a className="text-gray-600 dark:text-gray-300">Tags</a>
+        </Link>
         <Link href="/projects">
           <a className="text-gray-600 dark:text-gray-300">Projects</a>
         </Link>

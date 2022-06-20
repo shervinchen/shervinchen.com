@@ -6,7 +6,7 @@ export type Post = {
   title: string;
   date: string;
   description: string;
-  tag: string;
+  tags: string[];
   source: MDXRemoteSerializeResult;
   readingTime: ReadTimeResults;
 };
