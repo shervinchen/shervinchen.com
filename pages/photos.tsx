@@ -35,25 +35,27 @@ const PhotosPage: NextPage<{
         Here are some of the photos I took during the travel.
       </p>
       <div>
-        <Masonry
-          breakpointCols={{ default: 3, 768: 2, 640: 1 }}
-          className="photos-grid"
-          columnClassName="photos-grid_column"
-        >
-          {photosData.map((photoData, index) => {
+        <PhotoProvider
+          overlayRender={({ images, index }) => {
+            const currentPhoto = photosData.find(
+              (item) => item.original === images[index].src
+            );
             return (
-              <PhotoProvider
-                key={index}
-                overlayRender={() => {
-                  return (
-                    <div className="absolute left-0 bottom-0 p-2 w-full min-h-24 text-sm text-center text-slate-300 z-50 bg-black/50">
-                      <p>Location: {photosData[index].location}</p>
-                      <p>Date: {photosData[index].date}</p>
-                    </div>
-                  );
-                }}
-              >
-                <PhotoView src={photoData.original}>
+              <div className="absolute left-0 bottom-0 p-2 w-full min-h-24 text-sm text-center text-slate-300 z-50 bg-black/50">
+                <p>Location: {currentPhoto?.location ?? 'unknown'}</p>
+                <p>Date: {currentPhoto?.date ?? 'unknown'}</p>
+              </div>
+            );
+          }}
+        >
+          <Masonry
+            breakpointCols={{ default: 3, 768: 2, 640: 1 }}
+            className="photos-grid"
+            columnClassName="photos-grid_column"
+          >
+            {photosData.map((photoData, index) => {
+              return (
+                <PhotoView key={index} src={photoData.original}>
                   <div>
                     <Image
                       {...photosProps[index]}
@@ -62,10 +64,10 @@ const PhotosPage: NextPage<{
                     />
                   </div>
                 </PhotoView>
-              </PhotoProvider>
-            );
-          })}
-        </Masonry>
+              );
+            })}
+          </Masonry>
+        </PhotoProvider>
       </div>
     </Layout>
   );
