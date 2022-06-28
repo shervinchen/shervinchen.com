@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
+import Giscus from '@giscus/react';
+import { useTheme } from 'next-themes';
 
 import Layout from '../../components/Layout';
 import { getPostPaths, getPost } from '../../lib/getPost';
@@ -10,6 +12,8 @@ import { Post } from '../../types';
 import { formatDate } from '../../utils';
 
 const PostPage: NextPage<{ post: Post }> = ({ post }) => {
+  const { theme, resolvedTheme } = useTheme();
+
   return (
     <Layout>
       <Head>
@@ -36,9 +40,23 @@ const PostPage: NextPage<{ post: Post }> = ({ post }) => {
         <span> · </span>
         <span>{`${Math.round(post.readingTime.minutes)}min`}</span>
       </div>
-      <article className="prose dark:prose-dark">
+      <article className="prose dark:prose-dark mb-8">
         <MDXRemote {...post.source} />
       </article>
+      <Giscus
+        id="comments"
+        repo="shervinchen/shervinchen.com"
+        repoId="R_kgDOHCyJYw"
+        category="Announcements"
+        categoryId="DIC_kwDOHCyJY84CP6t0"
+        mapping="pathname"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="top"
+        theme={theme === 'dark' || resolvedTheme === 'dark' ? 'dark' : 'light'}
+        lang="en"
+        loading="lazy"
+      />
     </Layout>
   );
 };
