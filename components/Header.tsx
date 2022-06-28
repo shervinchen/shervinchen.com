@@ -41,6 +41,9 @@ export default function Header() {
         <Link href="/photos">
           <a className="text-gray-600 dark:text-gray-300">Photos</a>
         </Link>
+        <Link href="/contact">
+          <a className="text-gray-600 dark:text-gray-300">Contact</a>
+        </Link>
         <ThemeSwitch />
       </nav>
     </header>

@@ -17,7 +17,7 @@ const PhotosPage: NextPage<{
     <Layout>
       <Head>
         <title>Photos</title>
-        <meta name="title" content="Posts" />
+        <meta name="title" content="Photos" />
         <meta name="description" content="Shervin Chen's personal website" />
         <meta property="og:title" content="Photos" />
         <meta

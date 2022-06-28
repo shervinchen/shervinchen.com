@@ -15,7 +15,7 @@ const ProjectsPage: NextPage<{
     <Layout>
       <Head>
         <title>Projects</title>
-        <meta name="title" content="Posts" />
+        <meta name="title" content="Projects" />
         <meta name="description" content="Shervin Chen's personal website" />
         <meta property="og:title" content="Projects" />
         <meta
